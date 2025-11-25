@@ -1,0 +1,7 @@
+with open(r"C:\Users\caswyn\Downloads\squid-1.conf", "r") as file:
+    text = file.read()
+new_text = text.replace("#", " ")
+
+with open(r"C:\Users\caswyn\Downloads\squid-1.conf", "w") as file:
+    file.write(new_text)
+
