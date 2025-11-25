@@ -1,0 +1,13 @@
+from pathlib import Path
+
+dir_path = Path(r"C:\Users\caswy\Downloads\newdirec")    # path of the directory folder
+
+for file in dir_path.glob("*"):                          # any file type will be accepted
+    if file.is_file(): 
+        with open(file, "r") as f:                       # read the content of the file
+            content = f.read()
+
+        new_content = content.replace("#", "")           # replacing "#" with ""
+
+        with open(file, "w") as f:                       # write the file with new content
+            f.write(new_content)
